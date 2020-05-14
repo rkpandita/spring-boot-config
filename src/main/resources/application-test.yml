@@ -1,0 +1,16 @@
+my:
+ greeting: Hello World 
+ list: 
+  values: 1,2,3
+ db:
+  values:
+   map: "{connectionString:  'http: //___', userName:  'raman', password:  'pandita'}"
+
+db:
+ connectionString: "{connectionString:  'http://test_profile_string', userName:  'raman', password:  'pandita'}"
+ host: 129.0.0.1
+ port: 2400
+
+management.endpoints.web.exposure.include: "*"
+
+spring.cloud.config.uri: http://localhost:8888

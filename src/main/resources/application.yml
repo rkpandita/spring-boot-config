@@ -1,0 +1,25 @@
+my:
+ greeting: Hello World 
+ list: 
+  values: 1,2,3
+ db:
+  values:
+   map: "{connectionString:  'http://___', userName:  'raman', password:  'pandita'}"
+
+db:
+ connectionString: "{connectionString:  'http://default_profile_string', userName:  'raman', password:  'pandita'}"
+ host: 127.0.0.1
+ port: 1200
+
+management.endpoints.web.exposure.include: "*"
+
+spring.profiles.active: default
+#spring.profiles.active: test
+
+#Refer to Spring Cloud Config Server application.properties file
+spring.cloud.config.uri: http://localhost:8888
+
+#This Microservice points to 'spring-boot-config.yml' in Spring_Cloud_Local_Repo (C:\localWS\Spring_Cloud_Local_Repo)
+spring.application.name: spring-boot-config
+
+#Hit a POST request via POSTMAN to activate refresh scope: 'http://localhost:8080/actuator/refresh'
